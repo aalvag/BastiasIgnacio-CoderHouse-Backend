@@ -1,6 +1,6 @@
 
 class Usuario {
-    constructor (nombre, apellido){
+    constructor (nombre, apellido, mascotas, libros){
         
         this.nombre = nombre;
         this.apellido = apellido;
@@ -10,7 +10,7 @@ class Usuario {
     }
 
     getFullName () {
-        console.log(`Nombre completo : ${this.nombre} ${this.apellido}`)
+        return(`${this.nombre} ${this.apellido}`)
     }
 
     addMascota (mascota) {
@@ -18,15 +18,15 @@ class Usuario {
     }
 
     countMascotas () {
-        console.log(this.mascotas.length)
+        return(this.mascotas.length)
     }
 
     addBook (nombre, autor) {
-        this.libros.push({Nombre: nombre, Autor: autor})
+        this.libros.push({nombre: nombre, autor: autor})
     }
 
     getBookNames () {
-        console.log(this.libros.map( libro => libro.Nombre))
+        return(this.libros.map( libro => libro.nombre))
     }
 }
 
